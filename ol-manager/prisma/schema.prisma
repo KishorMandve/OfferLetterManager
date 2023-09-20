@@ -9,3 +9,24 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id Int @id @default(autoincrement())
+  email String @unique
+  firstName String
+  lastName String
+  roles UserRoles[]
+}
+
+model UserRoles {
+  id Int @id @default(autoincrement())
+  role Role
+  user User @relation(fields: [userId], references: [id])
+  userId Int
+}
+
+enum Role {
+HR
+HR_MANAGER
+DIRECTOR
+}
