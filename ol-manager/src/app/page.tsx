@@ -1,8 +1,13 @@
+import Dashboard from "./components/Dashboard";
+import { HeaderNavbar } from "./components/HeaderNavbar";
 
 export default function Home() {
   return (
-    <main>
-      Hello World
-    </main>
+    <>
+      <HeaderNavbar />
+      <main>
+        <Dashboard />
+      </main>
+    </>
   )
 }

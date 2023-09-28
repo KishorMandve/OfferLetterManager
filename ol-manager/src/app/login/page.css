@@ -1,0 +1,14 @@
+#login-container {
+  background-image: url('/auth-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#login-container > .row {
+  min-height: 100vh;
+  background-color: rgba(20, 20, 20, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
